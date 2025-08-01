@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Mistri Type - KaamYogi</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .mistri-container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .mistri-container h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #003366;
+        }
+        .mistri-type-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .mistri-type-option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s, border 0.2s;
+            background: #fafafa;
+        }
+        .mistri-type-option:hover,
+        .mistri-type-option input[type="radio"]:checked + span {
+            background: #e3f2fd;
+            border-color: #2196f3;
+        }
+        .mistri-type-option input[type="radio"] {
+            margin-right: 12px;
+        }
+        .mistri-type-option span {
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .select-btn {
+            width: 100%;
+            padding: 12px 0;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 24px;
+            transition: background 0.2s;
+        }
+        .select-btn:hover {
+            background-color: #00509e;
+        }
+    </style>
+</head>
+<body>
+    <div class="mistri-container">
+        <h2>Select Type of Mistri</h2>
+        <form>
+            <div class="mistri-type-list">
+                <label class="mistri-type-option">
+                    <input type="radio" name="mistri_type" value="House Constructor" required>
+                    <span>House Constructor</span>
+                </label>
+                <label class="mistri-type-option">
+                    <input type="radio" name="mistri_type" value="Tile/Marble Expert" required>
+                    <span>Tile/Marble Expert</span>
+                </label>
+                <label class="mistri-type-option">
+                    <input type="radio" name="mistri_type" value="Saria Expert" required>
+                    <span>Saria Expert</span>
+                </label>
+                <label class="mistri-type-option">
+                    <input type="radio" name="mistri_type" value="Slab Expert" required>
+                    <span>Slab Expert</span>
+                </label>
+            </div>
+            <button type="submit" class="select-btn">Continue</button>
+        </form>
+    </div>

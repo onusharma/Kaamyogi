@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - KaamYogi</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .register-container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #003366;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .otp-btn, .register-btn {
+            width: 100%;
+            padding: 12px 0;
+            background-color: rgb(249, 97, 20);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .otp-btn:hover, .register-btn:hover {
+            background-color: rgb(249, 97, 20);
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" maxlength="10" required>
+            </div>
+            <button type="button" class="otp-btn" onclick="sendOTP()">Send OTP</button>
+            <div class="form-group" style="margin-top:18px;">
+                <label for="otp">OTP</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter OTP" maxlength="6" required>
+            </div>
+            <button type="submit" class="register-btn">Continue</button>
+        </form>
+    </div>
+    <script>
+        function sendOTP() {
+            alert('OTP sent to your mobile number!');
+            // Here you would integrate with your backend to send the OTP
+        }
+    </script>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile - KaamYogi</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .update-container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .update-container h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #003366;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .form-group input[type="file"] {
+            border: none;
+            font-size: 1rem;
+        }
+        .update-btn {
+            width: 100%;
+            padding: 12px 0;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .update-btn:hover {
+            background-color: #00509e;
+        }
+        .icons-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .icon-card {
+            text-align: center;
+        }
+        .icon-card img {
+            max-width: 100%;
+            height: 40px;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 600px) {
+            .icons-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+            }
+            .icon-card img {
+                height: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="update-container">
+        <h2>Update Profile</h2>
+        <form>
+            <div class="form-group">
+                <label style="font-weight:600; margin-bottom:10px; display:block;">Select Your Profession</label>
+                <div class="icons-grid" style="margin-bottom: 24px;">
+                    <label class="icon-card">
+                        <input type="radio" name="profession" value="Plumber" required style="margin-bottom: 6px;">
+                        <img src="images/plumber.png" alt="Plumber">
+                        <p>Plumber</p>
+                    </label>
+                    <label class="icon-card">
+                        <input type="radio" name="profession" value="Carpenter" required style="margin-bottom: 6px;">
+                        <img src="images/carpanter.png" alt="Carpenter">
+                        <p>Carpenter</p>
+                    </label>
+                    <label class="icon-card">
+                        <input type="radio" name="profession" value="Mistri" required style="margin-bottom: 6px;">
+                        <img src="images/mistri.png" alt="Mistri">
+                        <p>Mistri</p>
+                    </label>
+                    <label class="icon-card">
+                        <input type="radio" name="profession" value="Labour" required style="margin-bottom: 6px;">
+                        <img src="images/labour.png" alt="Labour">
+                        <p>Labour</p>
+                    </label>
+                    <label class="icon-card">
+                        <input type="radio" name="profession" value="Painter" required style="margin-bottom: 6px;">
+                        <img src="images/painter.png" alt="Painter">
+                        <p>Painter</p>
+                    </label>
+                    <label class="icon-card">
+                        <input type="radio" name="profession" value="Electrician" required style="margin-bottom: 6px;">
+                        <img src="images/electrician.png" alt="Electrician">
+                        <p>Electrician</p>
+                    </label>
+                    <label class="icon-card">
+                        <input type="radio" name="profession" value="Gardener" required style="margin-bottom: 6px;">
+                        <img src="images/gardner.png" alt="Gardener">
+                        <p>Gardener</p>
+                    </label>
+                    <label class="icon-card">
+                        <input type="radio" name="profession" value="Mechanic" required style="margin-bottom: 6px;">
+                        <img src="images/mechanic.png" alt="Mechanic">
+                        <p>Mechanic</p>
+                    </label>
+                </div>
+                <input type="text" id="other-profession" name="other_profession" placeholder="Any Other profession ">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="experience">Work Experience (in years)</label>
+                <input type="number" id="experience" name="experience" min="0" placeholder="e.g. 5" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="Enter your state" required>
+            </div>
+            <div class="form-group">
+                <label for="district">District</label>
+                <input type="text" id="district" name="district" placeholder="Enter your district" required>
+            </div>
+            <div class="form-group">
+                <label for="area">Area</label>
+                <input type="text" id="area" name="area" placeholder="Enter your area/locality" required>
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" name="pincode" maxlength="6" pattern="\d{6}" placeholder="Enter your pincode" required>
+            </div>
+            <div class="form-group">
+                <label for="photo">Upload Photo</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+            </div>
+            <button type="submit" class="update-btn">Update Profile</button>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Painter Type - KaamYogi</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .painter-container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .painter-container h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #003366;
+        }
+        .painter-type-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .painter-type-option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s, border 0.2s;
+            background: #fafafa;
+        }
+        .painter-type-option:hover,
+        .painter-type-option input[type="radio"]:checked + span {
+            background: #e3f2fd;
+            border-color: #2196f3;
+        }
+        .painter-type-option input[type="radio"] {
+            margin-right: 12px;
+        }
+        .painter-type-option span {
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .select-btn {
+            width: 100%;
+            padding: 12px 0;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 24px;
+            transition: background 0.2s;
+        }
+        .select-btn:hover {
+            background-color: #00509e;
+        }
+    </style>
+</head>
+<body>
+    <div class="painter-container">
+        <h2>Select Type of Painter</h2>
+        <form>
+            <div class="painter-type-list">
+                <label class="painter-type-option">
+                    <input type="radio" name="painter_type" value="Wall Putty/POP Expert" required>
+                    <span>Wall Putty/POP Expert</span>
+                </label>
+                <label class="painter-type-option">
+                    <input type="radio" name="painter_type" value="Fall Ceiling Expert" required>
+                    <span>Fall Ceiling Expert</span>
+                </label>
+                <label class="painter-type-option">
+                    <input type="radio" name="painter_type" value="White wash/Paint only" required>
+                    <span>White wash/Paint only</span>
+                </label>
+                <label class="painter-type-option">
+                    <input type="radio" name="painter_type" value="Graphic Art Painter" required>
+                    <span>Graphic Art Painter</span>
+                </label>
+                <label class="painter-type-option">
+                    <input type="radio" name="painter_type" value="All Services" required>
+                    <span>All Services (Provides all types of painting work)</span>
+                </label>
+            </div>
+            <button type="submit" class="select-btn">Continue</button>
+        </form>
+    </div>
+</body>
+</html>
